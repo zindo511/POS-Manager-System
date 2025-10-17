@@ -7,7 +7,7 @@ import java.time.LocalDateTime;
 public class Order {
 
     public final IntegerProperty id;
-    public final StringProperty employeeId;
+    public final IntegerProperty employeeId;
     public final DoubleProperty totalAmount;
     public final StringProperty paymentMethod;
     public final DoubleProperty customerPaid;
@@ -17,7 +17,7 @@ public class Order {
     //Constructor no-argument
     public Order() {
         this.id = new SimpleIntegerProperty();
-        this.employeeId = new SimpleStringProperty();
+        this.employeeId = new SimpleIntegerProperty();
         this.totalAmount = new SimpleDoubleProperty();
         this.paymentMethod = new SimpleStringProperty();
         this.customerPaid = new SimpleDoubleProperty();
@@ -46,15 +46,15 @@ public class Order {
     }
 
     //EmployeeID
-    public String getEmployeeId() {
+    public int getEmployeeId() {
         return employeeId.get();
     }
 
-    public void setEmployeeId(String employeeId) {
+    public void setEmployeeId(int employeeId) {
         this.employeeId.set(employeeId);
     }
 
-    public StringProperty employeeIdProperty() {
+    public IntegerProperty employeeIdProperty() {
         return employeeId;
     }
 

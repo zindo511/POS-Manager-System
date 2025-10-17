@@ -26,7 +26,12 @@ public class OrderItem {
     //Constructor full-argument
     public OrderItem(int id, int orderId, int productId, String productName, int quantity, double price, double subtotal) {
         this();
-
+        setId(id);
+        setProductId(productId);
+        setProductName(productName);
+        setQuantity(quantity);
+        setPrice(price);
+        setSubtotal(subtotal);
     }
 
     //ID
@@ -60,36 +65,60 @@ public class OrderItem {
         return productId.get();
     }
 
+    public void setProductId(int productId) {
+        this.productId.set(productId);
+    }
+
     public IntegerProperty productIdProperty() {
         return productId;
     }
 
+    //ProductName
     public String getProductName() {
         return productName.get();
+    }
+
+    public void setProductName(String productName) {
+        this.productName.set(productName);
     }
 
     public StringProperty productNameProperty() {
         return productName;
     }
 
+    //Quantity
     public int getQuantity() {
         return quantity.get();
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity.set(quantity);
     }
 
     public IntegerProperty quantityProperty() {
         return quantity;
     }
 
+    //Price
     public double getPrice() {
         return price.get();
+    }
+
+    public void setPrice(double price) {
+        this.price.set(price);
     }
 
     public DoubleProperty priceProperty() {
         return price;
     }
 
+    //Subtotal
     public double getSubtotal() {
         return subtotal.get();
+    }
+
+    public void setSubtotal(double subtotal) {
+        this.subtotal.set(subtotal);
     }
 
     public DoubleProperty subtotalProperty() {
